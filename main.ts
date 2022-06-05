@@ -39,7 +39,7 @@ export default class MyPlugin extends Plugin {
 				// loop through each TODO
 				for (const todo of todos) {
 					// complete the todo
-					text = text.replace(todo, `- [x] ${todo.replace(/^-\s*\[ \]\s*/, '')} #INCOMPLETE`);
+					text = text.replace(todo, `#INCOMPLETE ~~${todo.replace(/^-\s*\[ \]\s*/, '')}~~`);
 				}
 				editor.setValue(text);
 				// write the todos to the clipboard
